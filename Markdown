@@ -33,3 +33,4 @@ Esta arquitectura es fundamental por las siguientes razones:
 
 ---
 *Documento generado para el ejercicio de arquitectura de aplicaciones web.*
+
