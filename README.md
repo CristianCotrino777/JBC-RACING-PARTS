@@ -14,7 +14,7 @@ John Leonardo Hernández Matiz
 Fecha:
 Febrero de 2026
 
-📑 Contenido
+ Contenido
 
 Preguntas
 
