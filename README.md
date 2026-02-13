@@ -1,6 +1,5 @@
- Guía #1 – Ingeniería Web
-
-Integrantes:
+Guía #1 – Ingeniería Web
+Integrantes
 
 Bryan Alejandro Núñez Hernández
 
@@ -8,26 +7,28 @@ Cristian David Cotrino Vásquez
 
 Jonathan López
 
-Docente:
+Docente
+
 John Leonardo Hernández Matiz
 
-Fecha:
+Fecha
+
 Febrero de 2026
 
- Contenido
+Contenido
 
 Preguntas
 
 Actividad de Trabajo Autónomo
 
-Procedimiento y Metodología de la práctica
+Procedimiento y Metodología de la Práctica
 
- Preguntas
-1️ ¿Cuáles son los componentes esenciales de una aplicación web moderna y cómo se comunican?
+1. Preguntas
+1.1 ¿Cuáles son los componentes esenciales de una aplicación web moderna y cómo se comunican?
 
-Una aplicación web moderna está compuesta por distintos elementos que trabajan juntos para brindar una experiencia interactiva, escalable y segura.
+Una aplicación web moderna está compuesta por distintos elementos que trabajan en conjunto para brindar una experiencia interactiva, escalable y segura.
 
- 1. Frontend (Cliente)
+1. Frontend (Cliente)
 
 Es la parte con la que interactúa el usuario.
 
@@ -53,7 +54,7 @@ Mostrar datos recibidos
 
 Comunicación:
 
-HTTP/HTTPS
+HTTP / HTTPS
 
 APIs REST
 
@@ -61,7 +62,7 @@ GraphQL
 
 WebSockets (tiempo real)
 
- 2. Backend (Servidor)
+2. Backend (Servidor)
 
 Gestiona la lógica de negocio y procesa las solicitudes.
 
@@ -93,7 +94,7 @@ Consulta o modifica datos en la base de datos
 
 Devuelve respuestas en formato JSON o XML
 
- 3. Base de Datos
+3. Base de Datos
 
 Almacena la información de la aplicación.
 
@@ -117,9 +118,9 @@ El backend se conecta mediante drivers u ORMs
 
 No se comunica directamente con el frontend
 
- 4. API (Interfaz de Comunicación)
+4. API (Interfaz de Comunicación)
 
-Define cómo el frontend y backend intercambian datos.
+Define cómo el frontend y el backend intercambian datos.
 
 Tipos de API:
 
@@ -131,7 +132,7 @@ SOAP
 
 Actúa como intermediaria entre cliente y servidor.
 
- 5. Servidor Web
+5. Servidor Web
 
 Gestiona las solicitudes HTTP y sirve los recursos.
 
@@ -149,7 +150,7 @@ Redirigir solicitudes al backend
 
 Gestionar balanceo de carga
 
- Flujo de Comunicación
+Flujo de Comunicación
 
 El usuario interactúa con el frontend.
 
@@ -163,7 +164,7 @@ Devuelve la respuesta al frontend.
 
 El frontend actualiza la interfaz.
 
- Componentes adicionales
+Componentes adicionales
 
 Autenticación: JWT, OAuth
 
@@ -175,34 +176,35 @@ Orquestación: Kubernetes
 
 CDN para distribución global
 
-2️ ¿Por qué es necesaria la separación de responsabilidades entre cliente y servidor?
+1.2 ¿Por qué es necesaria la separación de responsabilidades entre cliente y servidor?
 
 La separación entre frontend y backend permite crear aplicaciones más organizadas, seguras y escalables.
 
-✔ Organización y claridad
+Organización y claridad
 
 Frontend: presentación e interacción
 
-Backend: lógica, reglas y acceso a datos
+Backend: lógica, reglas de negocio y acceso a datos
 
 Evita mezclar diseño con reglas de negocio.
 
- Mayor seguridad
+Seguridad
+
 La lógica crítica no puede ser modificada por el usuario.
 
 La base de datos no queda expuesta.
 
 La autenticación se controla desde el servidor.
 
- Escalabilidad
+Escalabilidad
 
 Se puede escalar el backend sin afectar el frontend.
 
 Permite usar arquitecturas como microservicios.
 
-Es clave en aplicaciones grandes como Netflix o Amazon.
+Es clave en aplicaciones de gran escala.
 
- Reutilización
+Reutilización
 
 Una misma API puede servir para:
 
@@ -214,7 +216,7 @@ Aplicaciones de terceros
 
 Reduce la duplicación de código.
 
- Trabajo en equipo
+Trabajo en equipo
 
 Permite dividir el desarrollo en:
 
@@ -224,11 +226,11 @@ Equipo backend
 
 Equipo base de datos / DevOps
 
-3️ ¿Cómo facilita HTML5 la creación de contenido web estructurado y accesible?
+1.3 ¿Cómo facilita HTML5 la creación de contenido web estructurado y accesible?
 
 HTML5 facilita la estructuración del contenido gracias a sus etiquetas semánticas.
 
-En lugar de usar muchos <div>, ahora existen etiquetas como:
+En lugar de usar múltiples <div>, ahora existen etiquetas como:
 
 <header>
 
@@ -240,23 +242,23 @@ En lugar de usar muchos <div>, ahora existen etiquetas como:
 
 <footer>
 
-Beneficios:
+Beneficios
 
 Mejor organización del contenido
 
-Mejor SEO
+Mejor posicionamiento SEO
 
 Mayor accesibilidad para lectores de pantalla
 
 Formularios más avanzados (email, date, number)
 
-Soporte para audio y video sin plugins
+Soporte para audio y video sin necesidad de plugins
 
-4️ ¿Qué ventajas aportan las etiquetas semánticas frente a <div>?
+1.4 ¿Qué ventajas aportan las etiquetas semánticas frente a <div>?
 
 Las etiquetas semánticas indican el significado del contenido, mientras que <div> solo agrupa elementos sin describirlos.
 
-Ventajas:
+Ventajas
 
 Código más claro y organizado
 
@@ -266,9 +268,9 @@ Mayor accesibilidad
 
 Mantenimiento más sencillo
 
-En resumen, las etiquetas semánticas permiten que la página sea más comprensible tanto para desarrolladores como para los navegadores.
+En resumen, las etiquetas semánticas permiten que la página sea más comprensible tanto para desarrolladores como para navegadores y motores de búsqueda.
 
- Actividad de Trabajo Autónomo
+2. Actividad de Trabajo Autónomo
 
 En el repositorio de GitHub se incluye:
 
@@ -280,7 +282,7 @@ Archivo Markdown
 
 Diagrama estructural
 
- Procedimiento y Metodología de la práctica
+3. Procedimiento y Metodología de la Práctica
 
 Se realizó la codificación en Markdown para estructurar correctamente la información y facilitar su comprensión tanto por el sistema como por el usuario final.
 
@@ -290,4 +292,4 @@ Código fuente en Markdown
 
 Visualización final renderizada en GitHub
 
- Repositorio desarrollado como parte de la asignatura Ingeniería Web – 2026.
+Repositorio desarrollado como parte de la asignatura Ingeniería Web – 2026.
