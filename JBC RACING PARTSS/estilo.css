@@ -11,7 +11,10 @@ body {
 
 /* Header */
 header {
-    background-color: #1a1a1a;
+    background-image: url('../fondo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     padding: 20px;
     text-align: center;
     border-bottom: 3px solid #BD2C09;
@@ -19,7 +22,7 @@ header {
 }
 
 header h1 {
-    color: #757272;
+    color: #ffffff;
     margin: 10px 0;
     font-size: 2.5em;
     font-weight: bold;
@@ -47,7 +50,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #757272;
+    background-color: #da8a8a;
     cursor: pointer;
 }
 
@@ -105,26 +108,6 @@ footer a {
 footer a:hover {
     color: #BD2C09;
     cursor: pointer;
-}
-
-/* Botón con class */
-.botones {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    padding: 10px 20px;
-    background-color: #333;
-    border: 2px solid #BD2C09;
-    border-radius: 5px;
-    letter-spacing: 1px;
-    font-weight: bold;
-    cursor: pointer;
-    font-family: Arial, sans-serif;
-    font-size: 1em;
-}
-
-.botones:hover {
-    background-color: #da8383;
 }
 
 /* Botón con selector de clase */
