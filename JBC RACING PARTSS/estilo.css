@@ -1,130 +1,516 @@
-/* Estilos básicos */
-body {
-    font-family: Arial, sans-serif;
+/* Hoja de estilos principal - CB Racing Parts */
+/* Hecha por Bryan, Cristian y Jonathan */
+
+:root {
+    --rojo:   #BD2C09;
+    --rojo2:  #e03a10;
+    --negro:  #0a0a0a;
+    --gris1:  #1a1a1a;
+    --gris2:  #2a2a2a;
+    --gris3:  #757272;
+    --blanco: #ffffff;
+}
+
+/* reseteo general para que no haya margenes raros */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: black;
-    color: white;
+}
+
+body {
+    font-family: 'Rajdhani', Arial, sans-serif;
+    background-color: var(--negro);
+    color: var(--blanco);
     word-spacing: 2px;
     letter-spacing: 0.5px;
 }
 
-/* Header */
+/* encabezado principal de la pagina */
 header {
     background-image: url('../fondo.png');
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
-    padding: 20px;
+    background-repeat: no-repeat;
+    padding: 30px 20px;
     text-align: center;
-    border-bottom: 3px solid #BD2C09;
-    box-shadow: 0 4px 10px #BD2C09;
+    border-bottom: 3px solid var(--rojo);
+    box-shadow: 0 4px 20px var(--rojo);
+    position: relative;
+    overflow: hidden;
+}
+
+/* franjas decorativas del header con position y transform */
+header::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: -60px;
+    width: 220px;
+    height: 160px;
+    background: var(--rojo);
+    opacity: 0.12;
+    transform: rotate(-25deg);
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    right: -60px;
+    width: 180px;
+    height: 140px;
+    background: var(--rojo);
+    opacity: 0.10;
+    transform: rotate(-25deg);
+}
+
+header img {
+    max-width: 130px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* el logo crece un poco al pasar el mouse */
+header img:hover {
+    transform: scale(1.08);
 }
 
 header h1 {
-    color: #ffffff;
-    margin: 10px 0;
-    font-size: 2.5em;
-    font-weight: bold;
-    letter-spacing: 5px;
-    text-shadow: 2px 4px 6px #BD2C09;
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--blanco);
+    font-size: 3em;
+    letter-spacing: 8px;
+    text-shadow: 2px 4px 12px var(--rojo);
 }
 
-/* Navegación */
+header .slogan {
+    font-style: italic;
+    color: var(--gris3);
+    margin-top: 6px;
+}
+
+/* barra de navegacion con flexbox para que quede centrada */
 nav {
-    background-color: #2a2a2a;
-    padding: 15px;
-    text-align: center;
+    background-color: var(--gris2);
+    padding: 14px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
-nav a {
-    color: white;
+nav a,
+nav .btn-nav {
+    color: var(--blanco);
     text-decoration: none;
-    margin: 0 15px;
-    padding: 10px 20px;
+    padding: 10px 22px;
     background-color: #333;
-    border: 2px solid #BD2C09;
+    border: 2px solid var(--rojo);
     border-radius: 5px;
     letter-spacing: 1px;
     font-weight: bold;
-}
-
-nav a:hover {
-    background-color: #da8a8a;
+    font-family: 'Rajdhani', Arial, sans-serif;
+    font-size: 1em;
     cursor: pointer;
+    transition: background-color 0.25s, transform 0.2s;
 }
 
-/* Section */
-section {
-    padding: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+/* los botones suben un poco al pasar el mouse */
+nav a:hover,
+nav .btn-nav:hover {
+    background-color: var(--rojo2);
+    transform: translateY(-3px);
 }
 
-/* Articles */
+/* centramos el contenido con margin auto */
+section.contenido {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+/* estilos generales para todos los articulos */
 article {
-    background-color: #1a1a1a;
-    padding: 20px;
-    margin: 20px 0;
-    border-left: 5px solid #BD2C09;
-    border-radius: 5px;
-    box-shadow: 2px 7px 10px rgba(189,44,9,0.3);
+    background-color: var(--gris1);
+    padding: 24px;
+    margin: 24px 0;
+    border-left: 5px solid var(--rojo);
+    border-radius: 6px;
+    box-shadow: 2px 7px 16px rgba(189, 44, 9, 0.30);
 }
 
 article h2 {
-    color: #757272;
-    font-size: 1.5em;
-    letter-spacing: 2px;
-    text-shadow: 1px 2px 4px black;
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--rojo2);
+    font-size: 1.8em;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
 }
 
 article p {
     text-align: justify;
-    word-spacing: 3px;
-    line-height: 25px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    color: #ddd;
 }
 
 article ul {
-    word-spacing: 3px;
-    line-height: 28px;
+    padding-left: 20px;
+    line-height: 1.9;
+    color: #ddd;
 }
 
-/* Footer */
-footer {
-    background-color: #1a1a1a;
+article .subtitulo {
+    color: #aaa;
+    margin-bottom: 18px;
+}
+
+/* imagen que flota a la derecha en la seccion sobre nosotros */
+#sobre-nosotros .imagen-float {
+    float: right;
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(135deg, var(--rojo) 0%, #800 100%);
+    border-radius: 50%;
+    margin: 0 0 16px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.5em;
+    transform: rotate(-5deg);
+    box-shadow: 0 0 30px rgba(189, 44, 9, 0.5);
+    flex-shrink: 0;
+}
+
+/* clearfix para limpiar el float */
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* grid del catalogo con flexbox */
+.catalogo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: space-between;
+}
+
+.catalogo-card {
+    flex: 1 1 280px;
+    background: var(--gris2);
+    border: 1px solid var(--rojo);
+    border-radius: 8px;
     padding: 20px;
-    text-align: center;
-    border-top: 3px solid #BD2C09;
-    margin-top: 30px;
-    box-shadow: 0 -4px 10px rgba(189,44,9,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* las cards se levantan al hacer hover */
+.catalogo-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(189, 44, 9, 0.45);
+}
+
+/* etiqueta de categoria en la esquina de cada card */
+.catalogo-card .etiqueta {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--rojo);
+    color: var(--blanco);
+    font-size: 0.72em;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-bottom-left-radius: 8px;
     letter-spacing: 1px;
+}
+
+.catalogo-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    color: var(--rojo2);
+    margin-bottom: 10px;
+}
+
+.catalogo-card ul {
+    padding-left: 18px;
+    color: #ccc;
+    line-height: 1.8;
+    font-size: 0.93em;
+}
+
+/* tarjetas de marcas */
+.marcas-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.marca-grupo {
+    flex: 1 1 180px;
+    background: var(--gris2);
+    border-radius: 6px;
+    padding: 14px 18px;
+    border-top: 3px solid var(--rojo);
+    text-align: center;
+    transition: transform 0.25s;
+}
+
+.marca-grupo:hover {
+    transform: scale(1.04);
+}
+
+.marca-grupo strong {
+    display: block;
+    color: var(--rojo2);
+    font-size: 0.85em;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.marca-grupo span {
+    color: #bbb;
+    font-size: 0.9em;
+}
+
+/* badge para el mensaje de contacto */
+.badge-centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: rgba(189, 44, 9, 0.12);
+    border: 1px dashed var(--rojo);
+    border-radius: 8px;
+    padding: 18px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.badge-centro p {
+    color: #ccc;
+    font-size: 0.96em;
+    text-align: center;
+}
+
+/* panel que muestra los temas aplicados */
+.panel-temas {
+    background: var(--gris1);
+    border: 1px solid var(--rojo);
+    border-radius: 8px;
+    padding: 24px;
+    margin: 30px 0;
+}
+
+.panel-temas h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--rojo2);
+    letter-spacing: 3px;
+    font-size: 1.5em;
+    margin-bottom: 16px;
+}
+
+.temas-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tema-chip {
+    flex: 1 1 180px;
+    background: var(--gris2);
+    border-left: 4px solid var(--rojo);
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-size: 0.88em;
+    transition: transform 0.2s;
+    position: relative;
+}
+
+.tema-chip:hover {
+    transform: translateX(4px);
+}
+
+.tema-chip .num {
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--rojo2);
+    font-size: 1.4em;
+    letter-spacing: 1px;
+}
+
+.tema-chip p {
+    color: #aaa;
+    font-size: 0.85em;
+    margin-top: 4px;
+    text-align: left;
+}
+
+/* pie de pagina */
+footer {
+    background-color: var(--gris1);
+    padding: 36px 20px 24px;
+    text-align: center;
+    border-top: 3px solid var(--rojo);
+    margin-top: 30px;
+    box-shadow: 0 -4px 14px rgba(189, 44, 9, 0.3);
+    letter-spacing: 1px;
+    position: relative;
+}
+
+/* emoji decorativo centrado arriba del footer */
+footer::before {
+    content: '🏍️';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em;
+    background: var(--gris1);
+    padding: 0 10px;
+}
+
+footer strong {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3em;
+    letter-spacing: 4px;
+}
+
+footer p {
+    margin: 6px 0;
+    font-size: 0.92em;
+    color: #bbb;
+}
+
+footer .slogan {
+    font-style: italic;
+    color: #aaa;
+}
+
+footer .creditos {
+    color: var(--gris3);
+    font-size: 0.85em;
+    margin-top: 10px;
+}
+
+footer .copyright {
+    margin-top: 14px;
+    color: #555;
 }
 
 footer a {
-    color: #757272;
+    color: var(--gris3);
     text-decoration: none;
+    transition: color 0.2s;
 }
 
 footer a:hover {
-    color: #BD2C09;
-    cursor: pointer;
+    color: var(--rojo);
 }
 
-/* Botón con selector de clase */
-.botones {
-    color: white;
-    background-color: #333;
-    border: 2px solid #BD2C09;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin: 0 15px;
-    font-family: Arial, sans-serif;
-    font-size: 1em;
+/* columnas de texto en sobre nosotros - T19 */
+.texto-columnas {
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid var(--gris2);
+}
+
+.texto-columnas p {
+    break-inside: avoid;
+}
+
+/* mapa iframe - T17 */
+.mapa-iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 16px;
+    filter: grayscale(40%);
+    transition: filter 0.4s ease;
+}
+
+/* el mapa se ve completo al pasar el mouse - T18 */
+.mapa-iframe:hover {
+    filter: grayscale(0%);
+}
+
+/* formulario de contacto - T16 */
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 16px;
+}
+
+/* cada campo del formulario */
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-grupo label {
     font-weight: bold;
-    letter-spacing: 1px;
-    cursor: pointer;
+    font-size: 0.9em;
+    color: #ccc;
+    letter-spacing: 0.5px;
 }
 
-.botones:hover {
-    background-color: #ff9292;
+/* estilos de los inputs, select y textarea - T16 */
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
+    background-color: var(--gris2);
+    color: var(--blanco);
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 10px 14px;
+    font-family: 'Rajdhani', Arial, sans-serif;
+    font-size: 1em;
+    outline: none;
+    /* transicion suave al enfocar el campo - T18 */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* cuando el usuario hace clic en un campo - T18 */
+.form-grupo input:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus {
+    border-color: var(--rojo);
+    box-shadow: 0 0 8px rgba(189, 44, 9, 0.5);
+}
+
+.form-grupo select option {
+    background-color: var(--gris2);
+}
+
+.form-grupo textarea {
+    resize: vertical;
+}
+
+/* boton de enviar el formulario */
+.btn-enviar {
+    align-self: flex-start;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    border: none;
+    border-radius: 5px;
+    padding: 12px 30px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    cursor: pointer;
+    /* transicion en el hover del boton - T18 */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-enviar:hover {
+    background-color: var(--rojo2);
+    transform: translateY(-2px);
 }
