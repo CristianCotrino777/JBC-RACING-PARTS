@@ -1,129 +1,261 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="icon" type="image/png" href="C:\Users\CIRA404\Documents\JBC RACING PARTS\ms-icon-310x310.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CB Racing Parts - Repuestos de Motos</title>
+    <link rel="icon" type="image/png" href="ms-icon-310x310.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- CSS Externo -->
+    <!-- archivo de estilos externos -->
     <link rel="stylesheet" href="css/estilo.css" type="text/css"/>
-
-    <!-- CSS Interno -->
-    <style type="text/css">
-        
-
-    </style>
 </head>
 <body>
 
-    <header>
-        <img src="WebWeb.png" alt="Logo CB Racing Parts" style="max-width: 200px; margin-bottom: 10px;">
-        <h1>BC RACING PARTS</h1>
-        <p style="font-style: italic; color: #757272;">Calidad sobre ruedas, confianza en cada km.</p>
-    </header>
+<!-- encabezado con el logo y nombre del sitio -->
+<header>
+    <img src="WebWeb.png" alt="Logo CB Racing Parts">
+    <h1>CB RACING PARTS</h1>
+    <p class="slogan">Calidad sobre ruedas, confianza en cada km.</p>
+</header>
 
-    <nav>
-        
-        <button class="Sobre-nosotros" onclick="window.location='#Sobre-nosotros'">Sobre-nosotros</button>
-        <a href="#Inicio">Inicio</a>
-        <a href="#catalogo">Catálogo</a>
-        <a href="#marcas">Marcas</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+<!-- barra de navegacion -->
+<nav>
+    <button class="btn-nav" onclick="window.location='#sobre-nosotros'">Sobre nosotros</button>
+    <a href="#inicio">Inicio</a>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#marcas">Marcas</a>
+    <a href="#ubicacion">Ubicación</a>
+    <a href="#contacto">Contacto</a>
+</nav>
 
-    <section>
-      
-        <article id="Sobre-nosotros">
-            <h2>¿Sobre nosotros ?</h2>
+<!-- contenido principal centrado -->
+<section class="contenido">
+
+    <!-- panel que muestra los temas de CSS que aplicamos -->
+    <div class="panel-temas">
+        <h2>Temas CSS aplicados en esta página</h2>
+        <div class="temas-flex">
+            <div class="tema-chip">
+                <span class="num">T11</span> Cajas flotantes
+                <p>La imagen en "Sobre nosotros" usa <code>float: right</code> + <code>clearfix</code>.</p>
+            </div>
+            <div class="tema-chip">
+                <span class="num">T12</span> Centrar contenido
+                <p><code>margin: 0 auto</code> en la sección y <code>transform: translateX(-50%)</code> en el footer.</p>
+            </div>
+            <div class="tema-chip">
+                <span class="num">T13</span> Flex sin dolor
+                <p>Nav, catálogo, marcas y chips usan <code>display: flex</code> + <code>flex-wrap</code>.</p>
+            </div>
+            <div class="tema-chip">
+                <span class="num">T14</span> Position
+                <p>Header, cards y footer usan <code>relative</code>/<code>absolute</code> para decoraciones.</p>
+            </div>
+            <div class="tema-chip">
+                <span class="num">T15</span> Transformaciones
+                <p><code>rotate</code>, <code>scale</code>, <code>translateY</code> y <code>translateX</code> en hovers.</p>
+            </div>
+            <div class="tema-chip">
+                <span class="num">T16</span> Formularios
+                <p>Formulario de contacto con inputs, select y textarea en la sección de contacto.</p>
+            </div>
+            <div class="tema-chip">
+                <span class="num">T17</span> iframe
+                <p>Mapa de Google Maps incrustado en la sección de ubicación.</p>
+            </div>
+            <div class="tema-chip">
+                <span class="num">T18</span> Transiciones
+                <p>Los inputs del formulario cambian de color suavemente con <code>transition</code>.</p>
+            </div>
+            <div class="tema-chip">
+                <span class="num">T19</span> Columnas de texto
+                <p>La descripción de la empresa usa <code>column-count</code> para dividirse en columnas.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- seccion sobre nosotros, la imagen flota a la derecha -->
+    <article id="sobre-nosotros" class="clearfix">
+        <div class="imagen-float"></div>
+
+        <h2>¿Sobre nosotros?</h2>
+
+        <!-- texto en columnas - T19 -->
+        <div class="texto-columnas">
             <p>
-                Somos <strong>Bryan</strong> ,<strong>Cristian</strong> y <strong>Jonathan</strong>, unos jovenes emprendedores y estamos apasionados   
-                por la tecnología y las motos, y decidimos crear este proyecto combinando nuestro amor por las motocicletas
-                 con nuestros 
-                conocimientos en programación.
-            </p>
-            <p>
-                CB Racing Parts nació tras la problematica o la falta de un lugar que sepa lo que realmente
-                desean los clientes, pero nuestra visión es crear una plataforma 
-                real donde los motociclistas puedan encontrar los mejores repuestos para sus motos. Aplicamos 
-                todo lo que hemos aprendido en la universidad para construir un sitio funcional, accesible y 
-                fácil de usar.
-            </p>
-            <p>
-                Tenemos experiencia en la compra y venta de repuestos de motos desde el 2000, nos enorgullece decir que nos
-                convertimos en una parte fundamental de la necesidad cotidiana en cuanto a los arreglos o mejoras que nuestros
-                usuarios quieran hacerle a sus motos, esto lo logramos ya que ofrecemos una gran confiabilidad en cuanto a la 
-                calidad de nuestros repuestos y el precio que manejamos el cual es bastante competitivo con nuestros colegas.
-            </p>
-             <p>
-                Creemos en la calidad sobre ruedas y la confianza en cada kilómetro. ¡Gracias por visitarnos y creer en nosotros!
-            </p>
-        </article>
-
-      <article id="catalogo">
-    <h2>Repuestos de Motor</h2>
-    <ul>
-        <li>Pistones, cilindros, empaques y válvulas.</li>
-        <li>Cadenas de distribución y kits de arrastre completos.</li>
-        <li>Piezas originales (OEM) y aftermarket.</li>
-        <li>Marcas: Takasago, DID, NGK, Bosch y Denso.</li>
-        <li>Garantía y asesoría técnica especializada.</li>
-    </ul>
-</article>
-
-<article>
-    <h2>Sistema de Frenos y Suspensión</h2>
-    <ul>
-        <li>Pastillas de freno, discos, bombas y mangueras de acero reforzado.</li>
-        <li>Líquido de frenos DOT 4 y DOT 5.</li>
-        <li>Amortiguadores, horquillas y resortes progresivos.</li>
-        <li>Kits de mantenimiento para suspensión.</li>
-        <li>Productos certificados y probados.</li>
-    </ul>
-</article>
-
-<article>
-    <h2>Accesorios y Personalización</h2>
-    <ul>
-        <li>Espejos retrovisores, manubrios deportivos y carenados aerodinámicos.</li>
-        <li>Luces LED de alta potencia y escapes deportivos.</li>
-        <li>Sistemas de sonido para motos.</li>
-        <li>Equipamiento: Cascos, guantes, chaquetas y protectores.</li>
-    </ul>
-</article>
-
-        <article id="marcas">
-            <h2>Marcas de Motos</h2>
-            <p>
-                Trabajamos con repuestos para todas las marcas de motocicletas:
+                Somos <strong>Bryan</strong>, <strong>Cristian</strong> y <strong>Jonathan</strong>, jóvenes emprendedores
+                apasionados por la tecnología y las motos. Decidimos crear este proyecto combinando nuestro amor por las
+                motocicletas con nuestros conocimientos en programación.
             </p>
             <p>
-                <strong>Japonesas:</strong> Yamaha, Honda, Suzuki, Kawasaki<br>
-                <strong>Indias:</strong> Bajaj, TVS, Hero, Royal Enfield<br>
-                <strong>Colombianas:</strong> AKT, Auteco<br>
-                <strong>Europeas:</strong> KTM, BMW, Ducati, Triumph<br>
-                <strong>Chinas:</strong> Zongshen, Shineray, Lifan
+                CB Racing Parts nació para resolver la falta de un lugar que realmente entienda al motociclista.
+                Nuestra visión es una plataforma donde puedas encontrar los mejores repuestos con asesoría real.
             </p>
             <p>
-                Si tienes dudas sobre la compatibilidad de algún repuesto con tu modelo específico, 
-                contáctanos y te asesoramos sin costo.
+                Con experiencia desde el año 2000 en compra y venta de repuestos, nos hemos convertido en una referencia
+                de confiabilidad, calidad y precios competitivos para la comunidad motociclista colombiana.
             </p>
-        </article>
-    </section>
+            <p>¡Gracias por visitarnos y creer en nosotros!</p>
+        </div>
+    </article>
 
-    <footer id="contacto">
-        <p><strong>BC RACING PARTS</strong></p>
-        <p style="font-style: italic; color: #ffffff;">Calidad sobre ruedas, confianza en cada km.</p>
-        <h7> Creado por Bryan nuñez, Jhonatan Lopez y Cristian Cotrino</h7> - Estudiantes de Ingeniería de Software (5to Semestre)</p>
-        <p>Email: <a href="mailto:info@bcracingparts.com">info@bcracingparts.com</a></p>
-        <p>WhatsApp: +57 300 123 4567</p>
-        <p>Dirección: Bogotá, Colombia</p>
-        <p>&copy; 2026 CB Racing Parts - Todos los derechos reservados</p>
+    <!-- catalogo con las 3 categorias de repuestos -->
+    <article id="catalogo">
+        <h2>Catálogo de repuestos</h2>
+        <div class="catalogo-grid">
 
-    </footer>
-    
+            <div class="catalogo-card">
+                <span class="etiqueta">MOTOR</span>
+                <h3>Repuestos de Motor</h3>
+                <ul>
+                    <li>Pistones, cilindros, empaques y válvulas</li>
+                    <li>Cadenas de distribución y kits de arrastre</li>
+                    <li>Piezas OEM y aftermarket</li>
+                    <li>NGK, Bosch, Denso, Takasago, DID</li>
+                    <li>Garantía y asesoría técnica</li>
+                </ul>
+            </div>
+
+            <div class="catalogo-card">
+                <span class="etiqueta">FRENOS</span>
+                <h3>Frenos y Suspensión</h3>
+                <ul>
+                    <li>Pastillas, discos, bombas y mangueras</li>
+                    <li>Líquido DOT 4 y DOT 5</li>
+                    <li>Amortiguadores y horquillas</li>
+                    <li>Resortes progresivos</li>
+                    <li>Productos certificados</li>
+                </ul>
+            </div>
+
+            <div class="catalogo-card">
+                <span class="etiqueta">ACCESORIOS</span>
+                <h3>Accesorios y Tuning</h3>
+                <ul>
+                    <li>Espejos y manubrios deportivos</li>
+                    <li>Luces LED y escapes deportivos</li>
+                    <li>Carenados aerodinámicos</li>
+                    <li>Cascos, guantes y chaquetas</li>
+                </ul>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- marcas con las que trabajamos -->
+    <article id="marcas">
+        <h2>Marcas de motos</h2>
+        <p class="subtitulo">Trabajamos con repuestos para todas las marcas:</p>
+
+        <div class="marcas-wrapper">
+            <div class="marca-grupo">
+                <strong>🇯🇵 Japonesas</strong>
+                <span>Yamaha · Honda · Suzuki · Kawasaki</span>
+            </div>
+            <div class="marca-grupo">
+                <strong>🇮🇳 Indias</strong>
+                <span>Bajaj · TVS · Hero · Royal Enfield</span>
+            </div>
+            <div class="marca-grupo">
+                <strong>🇨🇴 Colombianas</strong>
+                <span>AKT · Auteco</span>
+            </div>
+            <div class="marca-grupo">
+                <strong>🇪🇺 Europeas</strong>
+                <span>KTM · BMW · Ducati · Triumph</span>
+            </div>
+            <div class="marca-grupo">
+                <strong>🇨🇳 Chinas</strong>
+                <span>Zongshen · Shineray · Lifan</span>
+            </div>
+        </div>
+
+        <!-- mensaje de contacto centrado -->
+        <div class="badge-centro">
+            <span style="font-size:1.4em;">💬</span>
+            <p>¿Dudas sobre compatibilidad? Contáctanos y te asesoramos <strong>sin costo</strong>.</p>
+        </div>
+    </article>
+
+    <!-- mapa de ubicacion con iframe - T17 -->
+    <article id="ubicacion">
+        <h2>Nuestra ubicación</h2>
+        <p class="subtitulo">Nos encontramos en Bogotá, Colombia. ¡Visítanos!</p>
+
+        <!-- iframe con el mapa de google maps -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254508.0569583895!2d-74.24789694!3d4.648285849999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x239d635520a33914!2sBogot%C3%A1!5e0!3m2!1ses!2sco!4v1700000000000!5m2!1ses!2sco"
+            class="mapa-iframe"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación CB Racing Parts en Bogotá">
+        </iframe>
+    </article>
+
+    <!-- formulario de contacto - T16 -->
+    <article id="contacto-form">
+        <h2>Contáctanos</h2>
+        <p class="subtitulo">Completa el formulario y te respondemos lo antes posible.</p>
+
+        <form class="formulario-contacto">
+
+            <!-- datos personales -->
+            <div class="form-grupo">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            </div>
+
+            <div class="form-grupo">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+            </div>
+
+            <div class="form-grupo">
+                <label for="telefono">Teléfono / WhatsApp</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000">
+            </div>
+
+            <!-- tipo de consulta -->
+            <div class="form-grupo">
+                <label for="tema">Tipo de consulta</label>
+                <select id="tema" name="tema">
+                    <option value="">-- Selecciona una opción --</option>
+                    <option value="repuesto">Buscar un repuesto</option>
+                    <option value="compatibilidad">Compatibilidad de piezas</option>
+                    <option value="precio">Consulta de precio</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <!-- mensaje -->
+            <div class="form-grupo">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar mensaje</button>
+
+        </form>
+    </article>
+
+</section>
+
+<!-- pie de pagina con datos de contacto -->
+<footer>
+    <strong>CB RACING PARTS</strong>
+    <p class="slogan">Calidad sobre ruedas, confianza en cada km.</p>
+    <p class="creditos">
+        Creado por Bryan Núñez, Jonathan López y Cristian Cotrino —
+        Estudiantes de Ingeniería de Software (5.º Semestre)
+    </p>
+    <p><a href="mailto:info@cbracingparts.com">info@cbracingparts.com</a></p>
+    <p>WhatsApp: +57 300 123 4567</p>
+    <p>Bogotá, Colombia</p>
+    <p class="copyright">&copy; 2026 CB Racing Parts — Todos los derechos reservados</p>
+</footer>
+
 </body>
 </html>
-
-
-
