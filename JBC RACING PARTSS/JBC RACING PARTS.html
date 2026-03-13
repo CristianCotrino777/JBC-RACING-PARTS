@@ -7,20 +7,16 @@
     <link rel="icon" type="image/png" href="ms-icon-310x310.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- archivo de estilos externos -->
-    <link rel="stylesheet" href="css/estilo.css" type="text/css"/>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
-<!-- encabezado con el logo y nombre del sitio -->
 <header>
     <img src="WebWeb.png" alt="Logo CB Racing Parts">
     <h1>CB RACING PARTS</h1>
     <p class="slogan">Calidad sobre ruedas, confianza en cada km.</p>
 </header>
 
-<!-- barra de navegacion -->
 <nav>
     <button class="btn-nav" onclick="window.location='#sobre-nosotros'">Sobre nosotros</button>
     <a href="#inicio">Inicio</a>
@@ -30,59 +26,60 @@
     <a href="#contacto">Contacto</a>
 </nav>
 
-<!-- contenido principal centrado -->
 <section class="contenido">
 
-    <!-- panel que muestra los temas de CSS que aplicamos -->
     <div class="panel-temas">
-        <h2>Temas CSS aplicados en esta página</h2>
+        <h2>¿Por qué elegir repuestos de calidad?</h2>
         <div class="temas-flex">
             <div class="tema-chip">
-                <span class="num">T11</span> Cajas flotantes
-                <p>La imagen en "Sobre nosotros" usa <code>float: right</code> + <code>clearfix</code>.</p>
+                <span class="num">🔧</span> Motor y rendimiento
+                <p>Un pistón o empaque desgastado reduce la potencia hasta un <strong>30%</strong>. Cambia tus piezas a tiempo y cuida el motor de tu moto.</p>
             </div>
             <div class="tema-chip">
-                <span class="num">T12</span> Centrar contenido
-                <p><code>margin: 0 auto</code> en la sección y <code>transform: translateX(-50%)</code> en el footer.</p>
+                <span class="num">🛑</span> Frenos seguros
+                <p>Las pastillas de freno deben revisarse cada <strong>10.000 km</strong>. Usar piezas no certificadas puede aumentar la distancia de frenado al doble.</p>
             </div>
             <div class="tema-chip">
-                <span class="num">T13</span> Flex sin dolor
-                <p>Nav, catálogo, marcas y chips usan <code>display: flex</code> + <code>flex-wrap</code>.</p>
+                <span class="num">⛽</span> Sistema de combustible
+                <p>Un filtro de combustible obstruido daña la bomba y los inyectores. Reemplázalo cada <strong>8.000 – 12.000 km</strong> para un rendimiento óptimo.</p>
             </div>
             <div class="tema-chip">
-                <span class="num">T14</span> Position
-                <p>Header, cards y footer usan <code>relative</code>/<code>absolute</code> para decoraciones.</p>
+                <span class="num">🔩</span> Cadena y piñones
+                <p>La cadena de arrastre debe lubricarse cada <strong>500 km</strong> y reemplazarse junto con los piñones cada <strong>20.000 – 30.000 km</strong>.</p>
             </div>
             <div class="tema-chip">
-                <span class="num">T15</span> Transformaciones
-                <p><code>rotate</code>, <code>scale</code>, <code>translateY</code> y <code>translateX</code> en hovers.</p>
+                <span class="num">🛞</span> Suspensión
+                <p>Amortiguadores en mal estado afectan el control y la estabilidad. Revisalos si notas que la moto "bota" o pierde adherencia en curvas.</p>
             </div>
             <div class="tema-chip">
-                <span class="num">T16</span> Formularios
-                <p>Formulario de contacto con inputs, select y textarea en la sección de contacto.</p>
+                <span class="num">💡</span> Sistema eléctrico
+                <p>Una batería débil puede dañar el regulador de voltaje y el alternador. Verifica el voltaje — debe estar entre <strong>13.5 V y 14.5 V</strong>.</p>
             </div>
             <div class="tema-chip">
-                <span class="num">T17</span> iframe
-                <p>Mapa de Google Maps incrustado en la sección de ubicación.</p>
+                <span class="num">🛢️</span> Cambio de aceite
+                <p>El aceite de motor se debe cambiar cada <strong>3.000 – 5.000 km</strong> dependiendo del tipo (mineral, semisintético o sintético).</p>
             </div>
             <div class="tema-chip">
-                <span class="num">T18</span> Transiciones
-                <p>Los inputs del formulario cambian de color suavemente con <code>transition</code>.</p>
+                <span class="num">🪛</span> OEM vs Aftermarket
+                <p>Las piezas <strong>OEM</strong> son originales del fabricante. Las <strong>aftermarket</strong> de marcas certificadas como NGK o Bosch ofrecen igual calidad a menor precio.</p>
             </div>
             <div class="tema-chip">
-                <span class="num">T19</span> Columnas de texto
-                <p>La descripción de la empresa usa <code>column-count</code> para dividirse en columnas.</p>
+                <span class="num">📋</span> Mantenimiento preventivo
+                <p>Un plan de mantenimiento cada <strong>5.000 km</strong> puede extender la vida útil de tu moto en más de <strong>5 años</strong> y evitar daños costosos.</p>
             </div>
         </div>
     </div>
 
-    <!-- seccion sobre nosotros, la imagen flota a la derecha -->
     <article id="sobre-nosotros" class="clearfix">
-        <div class="imagen-float"></div>
+        <div class="video-float">
+            <video autoplay muted loop playsinline>
+                <source src="video.mp4" type="video/mp4">
+                <source src="video.webm" type="video/webm">
+            </video>
+        </div>
 
         <h2>¿Sobre nosotros?</h2>
 
-        <!-- texto en columnas - T19 -->
         <div class="texto-columnas">
             <p>
                 Somos <strong>Bryan</strong>, <strong>Cristian</strong> y <strong>Jonathan</strong>, jóvenes emprendedores
@@ -101,7 +98,16 @@
         </div>
     </article>
 
-    <!-- catalogo con las 3 categorias de repuestos -->
+    <div class="audio-section">
+        <h2>Nuestra música</h2>
+        <p>Escucha nuestra selección mientras exploras el catálogo.</p>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            <source src="audio.ogg" type="audio/ogg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    </div>
+
     <article id="catalogo">
         <h2>Catálogo de repuestos</h2>
         <div class="catalogo-grid">
@@ -144,7 +150,6 @@
         </div>
     </article>
 
-    <!-- marcas con las que trabajamos -->
     <article id="marcas">
         <h2>Marcas de motos</h2>
         <p class="subtitulo">Trabajamos con repuestos para todas las marcas:</p>
@@ -172,19 +177,16 @@
             </div>
         </div>
 
-        <!-- mensaje de contacto centrado -->
         <div class="badge-centro">
-            <span style="font-size:1.4em;">💬</span>
+            <span class="badge-icono">💬</span>
             <p>¿Dudas sobre compatibilidad? Contáctanos y te asesoramos <strong>sin costo</strong>.</p>
         </div>
     </article>
 
-    <!-- mapa de ubicacion con iframe - T17 -->
     <article id="ubicacion">
         <h2>Nuestra ubicación</h2>
         <p class="subtitulo">Nos encontramos en Bogotá, Colombia. ¡Visítanos!</p>
 
-        <!-- iframe con el mapa de google maps -->
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254508.0569583895!2d-74.24789694!3d4.648285849999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x239d635520a33914!2sBogot%C3%A1!5e0!3m2!1ses!2sco!4v1700000000000!5m2!1ses!2sco"
             class="mapa-iframe"
@@ -195,14 +197,12 @@
         </iframe>
     </article>
 
-    <!-- formulario de contacto - T16 -->
     <article id="contacto-form">
         <h2>Contáctanos</h2>
         <p class="subtitulo">Completa el formulario y te respondemos lo antes posible.</p>
 
         <form class="formulario-contacto">
 
-            <!-- datos personales -->
             <div class="form-grupo">
                 <label for="nombre">Nombre completo</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
@@ -218,7 +218,6 @@
                 <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000">
             </div>
 
-            <!-- tipo de consulta -->
             <div class="form-grupo">
                 <label for="tema">Tipo de consulta</label>
                 <select id="tema" name="tema">
@@ -230,7 +229,6 @@
                 </select>
             </div>
 
-            <!-- mensaje -->
             <div class="form-grupo">
                 <label for="mensaje">Mensaje</label>
                 <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
@@ -243,7 +241,6 @@
 
 </section>
 
-<!-- pie de pagina con datos de contacto -->
 <footer>
     <strong>CB RACING PARTS</strong>
     <p class="slogan">Calidad sobre ruedas, confianza en cada km.</p>
