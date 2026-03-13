@@ -11,7 +11,7 @@
     --blanco: #ffffff;
 }
 
-/* reseteo general para que no haya margenes raros */
+/* reseteo general */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -26,12 +26,15 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* encabezado principal de la pagina */
+/* =====================
+   HEADER
+   ===================== */
 header {
-    background-image: url('../fondo.png');
+    background-image: url('fondo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: #1a0505;
     padding: 30px 20px;
     text-align: center;
     border-bottom: 3px solid var(--rojo);
@@ -40,7 +43,6 @@ header {
     overflow: hidden;
 }
 
-/* franjas decorativas del header con position y transform */
 header::before {
     content: '';
     position: absolute;
@@ -71,7 +73,6 @@ header img {
     transition: transform 0.3s ease;
 }
 
-/* el logo crece un poco al pasar el mouse */
 header img:hover {
     transform: scale(1.08);
 }
@@ -90,7 +91,9 @@ header .slogan {
     margin-top: 6px;
 }
 
-/* barra de navegacion con flexbox para que quede centrada */
+/* =====================
+   NAV
+   ===================== */
 nav {
     background-color: var(--gris2);
     padding: 14px 20px;
@@ -117,21 +120,24 @@ nav .btn-nav {
     transition: background-color 0.25s, transform 0.2s;
 }
 
-/* los botones suben un poco al pasar el mouse */
 nav a:hover,
 nav .btn-nav:hover {
     background-color: var(--rojo2);
     transform: translateY(-3px);
 }
 
-/* centramos el contenido con margin auto */
+/* =====================
+   CONTENIDO PRINCIPAL
+   ===================== */
 section.contenido {
     max-width: 1100px;
     margin: 40px auto;
     padding: 0 24px;
 }
 
-/* estilos generales para todos los articulos */
+/* =====================
+   ARTICULOS
+   ===================== */
 article {
     background-color: var(--gris1);
     padding: 24px;
@@ -167,21 +173,27 @@ article .subtitulo {
     margin-bottom: 18px;
 }
 
-/* imagen que flota a la derecha en la seccion sobre nosotros */
-#sobre-nosotros .imagen-float {
+/* =====================
+   SOBRE NOSOTROS - VIDEO FLOTANTE
+   ===================== */
+.video-float {
     float: right;
     width: 180px;
     height: 180px;
-    background: linear-gradient(135deg, var(--rojo) 0%, #800 100%);
     border-radius: 50%;
     margin: 0 0 16px 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4.5em;
-    transform: rotate(-5deg);
+    overflow: hidden;
+    border: 3px solid var(--rojo);
     box-shadow: 0 0 30px rgba(189, 44, 9, 0.5);
     flex-shrink: 0;
+    transform: rotate(-5deg);
+}
+
+.video-float video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 /* clearfix para limpiar el float */
@@ -191,115 +203,56 @@ article .subtitulo {
     clear: both;
 }
 
-/* grid del catalogo con flexbox */
-.catalogo-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-    justify-content: space-between;
+/* columnas de texto */
+.texto-columnas {
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid var(--gris2);
 }
 
-.catalogo-card {
-    flex: 1 1 280px;
-    background: var(--gris2);
-    border: 1px solid var(--rojo);
-    border-radius: 8px;
-    padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
+.texto-columnas p {
+    break-inside: avoid;
 }
 
-/* las cards se levantan al hacer hover */
-.catalogo-card:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 12px 28px rgba(189, 44, 9, 0.45);
-}
-
-/* etiqueta de categoria en la esquina de cada card */
-.catalogo-card .etiqueta {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: var(--rojo);
-    color: var(--blanco);
-    font-size: 0.72em;
-    font-weight: bold;
-    padding: 4px 12px;
-    border-bottom-left-radius: 8px;
-    letter-spacing: 1px;
-}
-
-.catalogo-card h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.4em;
-    letter-spacing: 2px;
-    color: var(--rojo2);
-    margin-bottom: 10px;
-}
-
-.catalogo-card ul {
-    padding-left: 18px;
-    color: #ccc;
-    line-height: 1.8;
-    font-size: 0.93em;
-}
-
-/* tarjetas de marcas */
-.marcas-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-}
-
-.marca-grupo {
-    flex: 1 1 180px;
-    background: var(--gris2);
+/* =====================
+   REPRODUCTOR DE AUDIO
+   ===================== */
+.audio-section {
+    background-color: var(--gris1);
+    padding: 24px;
+    margin: 24px 0;
+    border-left: 5px solid var(--rojo);
     border-radius: 6px;
-    padding: 14px 18px;
-    border-top: 3px solid var(--rojo);
-    text-align: center;
-    transition: transform 0.25s;
+    box-shadow: 2px 7px 16px rgba(189, 44, 9, 0.30);
 }
 
-.marca-grupo:hover {
-    transform: scale(1.04);
-}
-
-.marca-grupo strong {
-    display: block;
+.audio-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
     color: var(--rojo2);
-    font-size: 0.85em;
-    letter-spacing: 1px;
-    margin-bottom: 6px;
+    font-size: 1.8em;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
 }
 
-.marca-grupo span {
-    color: #bbb;
-    font-size: 0.9em;
+.audio-section p {
+    color: #aaa;
+    margin-bottom: 16px;
+    font-size: 0.95em;
 }
 
-/* badge para el mensaje de contacto */
-.badge-centro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    background: rgba(189, 44, 9, 0.12);
-    border: 1px dashed var(--rojo);
+.audio-section audio {
+    width: 100%;
+    accent-color: var(--rojo);
     border-radius: 8px;
-    padding: 18px;
-    margin-top: 20px;
-    text-align: center;
 }
 
-.badge-centro p {
-    color: #ccc;
-    font-size: 0.96em;
-    text-align: center;
+audio::-webkit-media-controls-panel {
+    background-color: var(--gris2);
 }
 
-/* panel que muestra los temas aplicados */
+/* =====================
+   PANEL DE TEMAS / INFO
+   ===================== */
 .panel-temas {
     background: var(--gris1);
     border: 1px solid var(--rojo);
@@ -351,7 +304,210 @@ article .subtitulo {
     text-align: left;
 }
 
-/* pie de pagina */
+/* =====================
+   CATALOGO
+   ===================== */
+.catalogo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: space-between;
+}
+
+.catalogo-card {
+    flex: 1 1 280px;
+    background: var(--gris2);
+    border: 1px solid var(--rojo);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.catalogo-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(189, 44, 9, 0.45);
+}
+
+.catalogo-card .etiqueta {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--rojo);
+    color: var(--blanco);
+    font-size: 0.72em;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-bottom-left-radius: 8px;
+    letter-spacing: 1px;
+}
+
+.catalogo-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    color: var(--rojo2);
+    margin-bottom: 10px;
+}
+
+.catalogo-card ul {
+    padding-left: 18px;
+    color: #ccc;
+    line-height: 1.8;
+    font-size: 0.93em;
+}
+
+/* =====================
+   MARCAS
+   ===================== */
+.marcas-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.marca-grupo {
+    flex: 1 1 180px;
+    background: var(--gris2);
+    border-radius: 6px;
+    padding: 14px 18px;
+    border-top: 3px solid var(--rojo);
+    text-align: center;
+    transition: transform 0.25s;
+}
+
+.marca-grupo:hover {
+    transform: scale(1.04);
+}
+
+.marca-grupo strong {
+    display: block;
+    color: var(--rojo2);
+    font-size: 0.85em;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.marca-grupo span {
+    color: #bbb;
+    font-size: 0.9em;
+}
+
+.badge-centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: rgba(189, 44, 9, 0.12);
+    border: 1px dashed var(--rojo);
+    border-radius: 8px;
+    padding: 18px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.badge-centro p {
+    color: #ccc;
+    font-size: 0.96em;
+    text-align: center;
+}
+
+.badge-icono {
+    font-size: 1.4em;
+}
+
+/* =====================
+   MAPA IFRAME
+   ===================== */
+.mapa-iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 16px;
+    filter: grayscale(40%);
+    transition: filter 0.4s ease;
+}
+
+.mapa-iframe:hover {
+    filter: grayscale(0%);
+}
+
+/* =====================
+   FORMULARIO DE CONTACTO
+   ===================== */
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 16px;
+}
+
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-grupo label {
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #ccc;
+    letter-spacing: 0.5px;
+}
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
+    background-color: var(--gris2);
+    color: var(--blanco);
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 10px 14px;
+    font-family: 'Rajdhani', Arial, sans-serif;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus {
+    border-color: var(--rojo);
+    box-shadow: 0 0 8px rgba(189, 44, 9, 0.5);
+}
+
+.form-grupo select option {
+    background-color: var(--gris2);
+}
+
+.form-grupo textarea {
+    resize: vertical;
+}
+
+.btn-enviar {
+    align-self: flex-start;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    border: none;
+    border-radius: 5px;
+    padding: 12px 30px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-enviar:hover {
+    background-color: var(--rojo2);
+    transform: translateY(-2px);
+}
+
+/* =====================
+   FOOTER
+   ===================== */
 footer {
     background-color: var(--gris1);
     padding: 36px 20px 24px;
@@ -363,7 +519,6 @@ footer {
     position: relative;
 }
 
-/* emoji decorativo centrado arriba del footer */
 footer::before {
     content: '🏍️';
     position: absolute;
@@ -411,106 +566,4 @@ footer a {
 
 footer a:hover {
     color: var(--rojo);
-}
-
-/* columnas de texto en sobre nosotros - T19 */
-.texto-columnas {
-    column-count: 2;
-    column-gap: 30px;
-    column-rule: 1px solid var(--gris2);
-}
-
-.texto-columnas p {
-    break-inside: avoid;
-}
-
-/* mapa iframe - T17 */
-.mapa-iframe {
-    width: 100%;
-    height: 350px;
-    border: none;
-    border-radius: 8px;
-    margin-top: 16px;
-    filter: grayscale(40%);
-    transition: filter 0.4s ease;
-}
-
-/* el mapa se ve completo al pasar el mouse - T18 */
-.mapa-iframe:hover {
-    filter: grayscale(0%);
-}
-
-/* formulario de contacto - T16 */
-.formulario-contacto {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    margin-top: 16px;
-}
-
-/* cada campo del formulario */
-.form-grupo {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.form-grupo label {
-    font-weight: bold;
-    font-size: 0.9em;
-    color: #ccc;
-    letter-spacing: 0.5px;
-}
-
-/* estilos de los inputs, select y textarea - T16 */
-.form-grupo input,
-.form-grupo select,
-.form-grupo textarea {
-    background-color: var(--gris2);
-    color: var(--blanco);
-    border: 1px solid #444;
-    border-radius: 5px;
-    padding: 10px 14px;
-    font-family: 'Rajdhani', Arial, sans-serif;
-    font-size: 1em;
-    outline: none;
-    /* transicion suave al enfocar el campo - T18 */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* cuando el usuario hace clic en un campo - T18 */
-.form-grupo input:focus,
-.form-grupo select:focus,
-.form-grupo textarea:focus {
-    border-color: var(--rojo);
-    box-shadow: 0 0 8px rgba(189, 44, 9, 0.5);
-}
-
-.form-grupo select option {
-    background-color: var(--gris2);
-}
-
-.form-grupo textarea {
-    resize: vertical;
-}
-
-/* boton de enviar el formulario */
-.btn-enviar {
-    align-self: flex-start;
-    background-color: var(--rojo);
-    color: var(--blanco);
-    border: none;
-    border-radius: 5px;
-    padding: 12px 30px;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.1em;
-    letter-spacing: 2px;
-    cursor: pointer;
-    /* transicion en el hover del boton - T18 */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-enviar:hover {
-    background-color: var(--rojo2);
-    transform: translateY(-2px);
 }
