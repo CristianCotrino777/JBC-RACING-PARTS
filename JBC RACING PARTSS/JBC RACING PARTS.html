@@ -8,12 +8,54 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilo.css">
-
 </head>
 <body>
 
 <header>
     <img src="WebWeb.png" alt="Logo CB Racing Parts">
+
+    <!-- TEMA 24: SVG — Bandera de carreras vectorial -->
+    <svg class="svg-bandera" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 40" aria-label="Bandera de carreras">
+        <!-- fila 1 -->
+        <rect x="0"  y="0"  width="10" height="10" fill="white"/>
+        <rect x="10" y="0"  width="10" height="10" fill="black"/>
+        <rect x="20" y="0"  width="10" height="10" fill="white"/>
+        <rect x="30" y="0"  width="10" height="10" fill="black"/>
+        <rect x="40" y="0"  width="10" height="10" fill="white"/>
+        <rect x="50" y="0"  width="10" height="10" fill="black"/>
+        <rect x="60" y="0"  width="10" height="10" fill="white"/>
+        <rect x="70" y="0"  width="10" height="10" fill="black"/>
+        <!-- fila 2 -->
+        <rect x="0"  y="10" width="10" height="10" fill="black"/>
+        <rect x="10" y="10" width="10" height="10" fill="white"/>
+        <rect x="20" y="10" width="10" height="10" fill="black"/>
+        <rect x="30" y="10" width="10" height="10" fill="white"/>
+        <rect x="40" y="10" width="10" height="10" fill="black"/>
+        <rect x="50" y="10" width="10" height="10" fill="white"/>
+        <rect x="60" y="10" width="10" height="10" fill="black"/>
+        <rect x="70" y="10" width="10" height="10" fill="white"/>
+        <!-- fila 3 -->
+        <rect x="0"  y="20" width="10" height="10" fill="white"/>
+        <rect x="10" y="20" width="10" height="10" fill="black"/>
+        <rect x="20" y="20" width="10" height="10" fill="white"/>
+        <rect x="30" y="20" width="10" height="10" fill="black"/>
+        <rect x="40" y="20" width="10" height="10" fill="white"/>
+        <rect x="50" y="20" width="10" height="10" fill="black"/>
+        <rect x="60" y="20" width="10" height="10" fill="white"/>
+        <rect x="70" y="20" width="10" height="10" fill="black"/>
+        <!-- fila 4 -->
+        <rect x="0"  y="30" width="10" height="10" fill="black"/>
+        <rect x="10" y="30" width="10" height="10" fill="white"/>
+        <rect x="20" y="30" width="10" height="10" fill="black"/>
+        <rect x="30" y="30" width="10" height="10" fill="white"/>
+        <rect x="40" y="30" width="10" height="10" fill="black"/>
+        <rect x="50" y="30" width="10" height="10" fill="white"/>
+        <rect x="60" y="30" width="10" height="10" fill="black"/>
+        <rect x="70" y="30" width="10" height="10" fill="white"/>
+        <!-- mástil rojo -->
+        <rect x="0" y="0" width="3" height="40" fill="#BD2C09"/>
+    </svg>
+
     <h1>CB RACING PARTS</h1>
     <p class="slogan">Calidad sobre ruedas, confianza en cada km.</p>
 </header>
@@ -30,8 +72,15 @@
 
 <section class="contenido">
 
-    <!-- INICIO -->
+    <!-- ====== INICIO ====== -->
     <div id="pagina-inicio" class="pagina activa">
+
+        <!-- TEMA 25: CANVAS — Velocímetro animado -->
+        <div class="canvas-seccion">
+            <h2>Velocímetro CB Racing</h2>
+            <canvas id="velocimetro" width="260" height="200"></canvas>
+        </div>
+
         <div class="panel-temas">
             <h2>¿Por qué elegir repuestos de calidad?</h2>
             <div class="temas-flex">
@@ -48,7 +97,7 @@
         </div>
     </div>
 
-    <!-- SOBRE NOSOTROS -->
+    <!-- ====== SOBRE NOSOTROS ====== -->
     <div id="pagina-sobre-nosotros" class="pagina">
         <article id="sobre-nosotros" class="clearfix">
             <div class="video-float">
@@ -65,6 +114,7 @@
                 <p>¡Gracias por visitarnos y creer en nosotros!</p>
             </div>
         </article>
+
         <div class="audio-section">
             <h2>Nuestra música</h2>
             <p>Escucha nuestra selección mientras exploras el catálogo.</p>
@@ -74,9 +124,17 @@
                 Tu navegador no soporta el elemento de audio.
             </audio>
         </div>
+
+        <!-- TEMA 27: CONTENIDO EDITABLE — Notas del usuario -->
+        <!-- TEMA 28: STORAGE — Las notas se guardan en localStorage -->
+        <div class="notas-editables">
+            <h2>Notas rápidas</h2>
+            <p class="subtitulo">Escribe lo que necesites — se guarda automáticamente en tu navegador (localStorage).</p>
+            <div class="area-editable" contenteditable="true" id="notas-usuario"></div>
+        </div>
     </div>
 
-    <!-- CATÁLOGO -->
+    <!-- ====== CATÁLOGO ====== -->
     <div id="pagina-catalogo" class="pagina">
         <article id="catalogo">
             <h2>Catálogo de repuestos</h2>
@@ -117,7 +175,7 @@
         </article>
     </div>
 
-    <!-- MARCAS -->
+    <!-- ====== MARCAS ====== -->
     <div id="pagina-marcas" class="pagina">
         <article id="marcas">
             <h2>Marcas de motos</h2>
@@ -136,7 +194,7 @@
         </article>
     </div>
 
-    <!-- UBICACIÓN -->
+    <!-- ====== UBICACIÓN ====== -->
     <div id="pagina-ubicacion" class="pagina">
         <article id="ubicacion">
             <h2>Nuestra ubicación</h2>
@@ -152,7 +210,7 @@
         </article>
     </div>
 
-    <!-- CONTACTO -->
+    <!-- ====== CONTACTO ====== -->
     <div id="pagina-contacto" class="pagina">
         <article id="contacto-form">
             <h2>Contáctanos</h2>
@@ -189,11 +247,11 @@
         </article>
     </div>
 
-    <!-- MENSAJES GUARDADOS -->
+    <!-- ====== MENSAJES GUARDADOS ====== -->
     <div id="pagina-mensajes" class="pagina">
         <article>
             <h2>Mensajes recibidos</h2>
-            <p class="subtitulo">Formularios enviados guardados localmente en este dispositivo.</p>
+            <p class="subtitulo">Datos guardados en la base de datos SQLite del servidor.</p>
             <div id="contenedor-mensajes"></div>
             <button class="btn-limpiar" onclick="limpiarMensajes()">🗑️ Limpiar todos los mensajes</button>
         </article>
@@ -212,73 +270,195 @@
 </footer>
 
 <script>
-    // Navegación entre secciones
-    function mostrarSeccion(id) {
-        document.querySelectorAll('.pagina').forEach(p => p.classList.remove('activa'));
-        var pagina = document.getElementById('pagina-' + id);
-        if (pagina) pagina.classList.add('activa');
+// ============================================================
+// NAVEGACIÓN ENTRE SECCIONES
+// ============================================================
+function mostrarSeccion(id) {
+    document.querySelectorAll('.pagina').forEach(function(p) { p.classList.remove('activa'); });
+    var pagina = document.getElementById('pagina-' + id);
+    if (pagina) pagina.classList.add('activa');
 
-        // Resaltar nav activo
-        document.querySelectorAll('nav a, nav .btn-nav').forEach(el => el.classList.remove('nav-activo'));
-        document.querySelectorAll('nav a, nav .btn-nav').forEach(el => {
-            var txt = el.textContent.trim();
-            if (
-                (id === 'inicio' && txt === 'Inicio') ||
-                (id === 'sobre-nosotros' && txt.includes('nosotros')) ||
-                (id === 'catalogo' && txt.includes('logo')) ||
-                (id === 'marcas' && txt === 'Marcas') ||
-                (id === 'ubicacion' && txt.includes('caci')) ||
-                (id === 'contacto' && txt === 'Contacto') ||
-                (id === 'mensajes' && txt.includes('Mensajes'))
-            ) { el.classList.add('nav-activo'); }
+    document.querySelectorAll('nav a, nav .btn-nav').forEach(function(el) { el.classList.remove('nav-activo'); });
+    document.querySelectorAll('nav a, nav .btn-nav').forEach(function(el) {
+        var txt = el.textContent.trim();
+        if (
+            (id === 'inicio'          && txt === 'Inicio') ||
+            (id === 'sobre-nosotros'  && txt.includes('nosotros')) ||
+            (id === 'catalogo'        && txt.includes('logo')) ||
+            (id === 'marcas'          && txt === 'Marcas') ||
+            (id === 'ubicacion'       && txt.includes('caci')) ||
+            (id === 'contacto'        && txt === 'Contacto') ||
+            (id === 'mensajes'        && txt.includes('Mensajes'))
+        ) { el.classList.add('nav-activo'); }
+    });
+
+    if (id === 'mensajes') renderizarMensajes();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ============================================================
+// TEMA 25: CANVAS — Velocímetro animado
+// ============================================================
+var canvas = document.getElementById('velocimetro');
+var ctx    = canvas.getContext('2d');
+var vel    = 0;
+var subiendo = true;
+
+function dibujarVelocimetro(v) {
+    var cx = 130, cy = 170, r = 120;
+    ctx.clearRect(0, 0, 260, 200);
+
+    // Arco de fondo (gris)
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, Math.PI, 0);
+    ctx.strokeStyle = '#333';
+    ctx.lineWidth = 16;
+    ctx.stroke();
+
+    // TEMA 22: DEGRADADO — arco de velocidad con degradado lineal
+    var grad = ctx.createLinearGradient(cx - r, cy, cx + r, cy);
+    grad.addColorStop(0,   '#2a0505');
+    grad.addColorStop(0.5, '#BD2C09');
+    grad.addColorStop(1,   '#e03a10');
+    var angFin = Math.PI + (v / 100) * Math.PI;
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, Math.PI, angFin);
+    ctx.strokeStyle = grad;
+    ctx.lineWidth = 16;
+    ctx.stroke();
+
+    // Marcas de velocidad
+    for (var i = 0; i <= 10; i++) {
+        var ang = Math.PI + (i / 10) * Math.PI;
+        var x1 = cx + (r - 24) * Math.cos(ang);
+        var y1 = cy + (r - 24) * Math.sin(ang);
+        var x2 = cx + r * Math.cos(ang);
+        var y2 = cy + r * Math.sin(ang);
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.strokeStyle = i % 5 === 0 ? '#fff' : '#555';
+        ctx.lineWidth   = i % 5 === 0 ? 3 : 1;
+        ctx.stroke();
+    }
+
+    // Aguja
+    var angAguja = Math.PI + (v / 100) * Math.PI;
+    var xAg = cx + (r - 28) * Math.cos(angAguja);
+    var yAg = cy + (r - 28) * Math.sin(angAguja);
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.lineTo(xAg, yAg);
+    ctx.strokeStyle = '#e03a10';
+    ctx.lineWidth = 3;
+    ctx.stroke();
+
+    // Centro
+    ctx.beginPath();
+    ctx.arc(cx, cy, 9, 0, Math.PI * 2);
+    ctx.fillStyle = '#BD2C09';
+    ctx.fill();
+
+    // Número de velocidad
+    ctx.fillStyle = '#fff';
+    ctx.font = 'bold 26px Rajdhani, Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText(Math.round(v) + ' km/h', cx, cy - 45);
+
+    ctx.fillStyle = '#666';
+    ctx.font = '11px Rajdhani, Arial';
+    ctx.fillText('CB RACING PARTS', cx, cy - 25);
+}
+
+function animarVelocimetro() {
+    if (subiendo) { vel += 0.6; if (vel >= 100) subiendo = false; }
+    else          { vel -= 0.6; if (vel <= 0)   subiendo = true;  }
+    dibujarVelocimetro(vel);
+    requestAnimationFrame(animarVelocimetro);
+}
+animarVelocimetro();
+
+// ============================================================
+// TEMA 27: CONTENIDO EDITABLE
+// TEMA 28: STORAGE — Las notas se guardan en localStorage
+// ============================================================
+var notasArea = document.getElementById('notas-usuario');
+if (notasArea) {
+    // Al cargar, recupera lo que había guardado
+    notasArea.innerHTML = localStorage.getItem('cbNotas') || '';
+    // Cada vez que el usuario escribe, guarda automáticamente
+    notasArea.addEventListener('input', function() {
+        localStorage.setItem('cbNotas', notasArea.innerHTML);
+    });
+}
+
+// ============================================================
+// FORMULARIO → BASE DE DATOS SQLite (backend Node.js)
+// ============================================================
+async function guardarMensaje(event) {
+    event.preventDefault();
+    var datos = {
+        fecha:    new Date().toLocaleString('es-CO'),
+        nombre:   document.getElementById('nombre').value,
+        email:    document.getElementById('email').value,
+        telefono: document.getElementById('telefono').value || '—',
+        tema:     document.getElementById('tema').value || '—',
+        mensaje:  document.getElementById('mensaje').value || '—'
+    };
+
+    try {
+        var res = await fetch('http://localhost:5000/api/mensajes', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(datos)
         });
-
-        if (id === 'mensajes') renderizarMensajes();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (res.ok) {
+            event.target.reset();
+            alert('✅ Mensaje guardado en la base de datos.');
+            mostrarSeccion('mensajes');
+        }
+    } catch(e) {
+        alert('⚠️ No se pudo conectar al servidor.\nAsegúrate de correr: node server.js');
     }
+}
 
-    // Guardar mensaje del formulario en localStorage
-    function guardarMensaje(event) {
-        event.preventDefault();
-        var nuevo = {
-            fecha: new Date().toLocaleString('es-CO'),
-            nombre: document.getElementById('nombre').value,
-            email: document.getElementById('email').value,
-            telefono: document.getElementById('telefono').value || '—',
-            tema: document.getElementById('tema').value || '—',
-            mensaje: document.getElementById('mensaje').value || '—'
-        };
-        var guardados = JSON.parse(localStorage.getItem('cbMensajes') || '[]');
-        guardados.unshift(nuevo);
-        localStorage.setItem('cbMensajes', JSON.stringify(guardados));
-        event.target.reset();
-        alert(' ¡Mensaje guardado correctamente!');
-        mostrarSeccion('mensajes');
-    }
+// Traer mensajes desde la base de datos
+async function renderizarMensajes() {
+    var cont = document.getElementById('contenedor-mensajes');
+    cont.innerHTML = '<p class="sin-mensajes">Cargando mensajes...</p>';
 
-    // Mostrar mensajes en tabla
-    function renderizarMensajes() {
-        var contenedor = document.getElementById('contenedor-mensajes');
-        var mensajes = JSON.parse(localStorage.getItem('cbMensajes') || '[]');
+    try {
+        var res      = await fetch('http://localhost:5000/api/mensajes');
+        var mensajes = await res.json();
+
         if (mensajes.length === 0) {
-            contenedor.innerHTML = '<p class="sin-mensajes">Aún no hay mensajes guardados.</p>';
+            cont.innerHTML = '<p class="sin-mensajes">Aún no hay mensajes guardados.</p>';
             return;
         }
-        var html = '<table class="tabla-mensajes"><thead><tr><th>Fecha</th><th>Nombre</th><th>Correo</th><th>Teléfono</th><th>Consulta</th><th>Mensaje</th></tr></thead><tbody>';
+
+        var html = '<table class="tabla-mensajes"><thead><tr><th>#</th><th>Fecha</th><th>Nombre</th><th>Correo</th><th>Teléfono</th><th>Consulta</th><th>Mensaje</th></tr></thead><tbody>';
         mensajes.forEach(function(m) {
-            html += '<tr><td>' + m.fecha + '</td><td>' + m.nombre + '</td><td>' + m.email + '</td><td>' + m.telefono + '</td><td>' + m.tema + '</td><td>' + m.mensaje + '</td></tr>';
+            html += '<tr><td>' + m.id + '</td><td>' + m.fecha + '</td><td>' + m.nombre + '</td><td>' + m.email + '</td><td>' + m.telefono + '</td><td>' + m.tema + '</td><td>' + m.mensaje + '</td></tr>';
         });
         html += '</tbody></table>';
-        contenedor.innerHTML = html;
-    }
+        cont.innerHTML = html;
 
-    // Limpiar mensajes
-    function limpiarMensajes() {
-        if (confirm('¿Seguro que deseas eliminar todos los mensajes?')) {
-            localStorage.removeItem('cbMensajes');
+    } catch(e) {
+        cont.innerHTML = '<p class="sin-mensajes">⚠️ Servidor no encontrado. Corre: <strong>node server.js</strong></p>';
+    }
+}
+
+// Eliminar todos los mensajes de la base de datos
+async function limpiarMensajes() {
+    if (confirm('¿Seguro que deseas eliminar todos los mensajes?')) {
+        try {
+            await fetch('http://localhost:5000/api/mensajes', { method: 'DELETE' });
             renderizarMensajes();
+        } catch(e) {
+            alert('⚠️ No se pudo conectar al servidor.');
         }
     }
+}
 </script>
 
 </body>
