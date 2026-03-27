@@ -632,3 +632,238 @@ nav .btn-nav.nav-activo {
 .btn-limpiar:hover {
     background: rgba(189, 44, 9, 0.15);
 }
+
+/* =====================
+   TEMA 22: TRANSPARENCIAS Y DEGRADADOS
+   ===================== */
+
+/* Degradado encima de la imagen de fondo del header */
+header {
+    background-image:
+        linear-gradient(180deg, rgba(10,0,0,0.6) 0%, rgba(0,0,0,0.85) 100%),
+        url('fondo.png');
+}
+
+/* Degradado en los botones del nav */
+nav a,
+nav .btn-nav {
+    background: linear-gradient(180deg, #3a3a3a 0%, #1e1e1e 100%);
+}
+
+nav a:hover,
+nav .btn-nav:hover {
+    background: linear-gradient(180deg, var(--rojo2) 0%, var(--rojo) 100%);
+}
+
+/* Degradado en las cards del catálogo */
+.catalogo-card {
+    background: linear-gradient(145deg, #2a2a2a 0%, #1a1a1a 100%);
+}
+
+/* Degradado en el footer */
+footer {
+    background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+}
+
+/* Transparencia en el badge de marcas */
+.badge-centro {
+    background: rgba(189, 44, 9, 0.10);
+}
+
+/* =====================
+   TEMA 23: ANIMACIONES (@keyframes)
+   ===================== */
+
+/* Pulso: el logo del header late suavemente */
+@keyframes pulso {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.07); }
+    100% { transform: scale(1); }
+}
+
+/* Entrada: las secciones aparecen desde abajo al mostrarlas */
+@keyframes entrada {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* Brillar: el video de "sobre nosotros" pulsa con brillo rojo */
+@keyframes brillar {
+    0%   { box-shadow: 0 0 10px rgba(189, 44, 9, 0.35); }
+    50%  { box-shadow: 0 0 32px rgba(189, 44, 9, 0.90); }
+    100% { box-shadow: 0 0 10px rgba(189, 44, 9, 0.35); }
+}
+
+/* Girar: la bandera SVG gira lentamente */
+@keyframes girarBandera {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Aplicar animaciones */
+header img {
+    animation: pulso 3s ease-in-out infinite;
+}
+
+.pagina.activa article,
+.pagina.activa .panel-temas,
+.pagina.activa .audio-section,
+.pagina.activa .canvas-seccion,
+.pagina.activa .notas-editables {
+    animation: entrada 0.45s ease both;
+}
+
+.video-float {
+    animation: brillar 2.5s ease-in-out infinite;
+    transform: rotate(-5deg); /* mantiene la rotación original */
+}
+
+/* =====================
+   TEMA 24: SVG
+   ===================== */
+.svg-bandera {
+    display: block;
+    margin: 12px auto 0;
+    width: 88px;
+    height: 44px;
+    opacity: 0.85;
+    filter: drop-shadow(0 0 6px rgba(189, 44, 9, 0.6));
+}
+
+/* =====================
+   TEMA 25: CANVAS
+   ===================== */
+.canvas-seccion {
+    background: var(--gris1);
+    border-left: 5px solid var(--rojo);
+    border-radius: 6px;
+    padding: 24px;
+    margin: 0 0 24px 0;
+    text-align: center;
+    box-shadow: 2px 7px 16px rgba(189, 44, 9, 0.30);
+}
+
+.canvas-seccion h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--rojo2);
+    font-size: 1.8em;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+#velocimetro {
+    border-radius: 8px;
+    background: #0a0a0a;
+    border: 3px solid var(--rojo);
+}
+
+/* =====================
+   TEMA 27: CONTENIDO EDITABLE
+   ===================== */
+.notas-editables {
+    background: var(--gris1);
+    border-left: 5px solid var(--rojo);
+    border-radius: 6px;
+    padding: 24px;
+    margin: 24px 0;
+    box-shadow: 2px 7px 16px rgba(189, 44, 9, 0.30);
+}
+
+.notas-editables h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--rojo2);
+    font-size: 1.8em;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.notas-editables p.subtitulo {
+    color: #aaa;
+    margin-bottom: 14px;
+    font-size: 0.95em;
+}
+
+.area-editable {
+    background: var(--gris2);
+    border: 1px dashed var(--rojo);
+    border-radius: 5px;
+    padding: 14px;
+    min-height: 80px;
+    color: #ddd;
+    font-family: 'Rajdhani', Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.6;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.area-editable:focus {
+    border-color: var(--rojo2);
+    box-shadow: 0 0 8px rgba(189, 44, 9, 0.45);
+}
+
+.area-editable:empty::before {
+    content: 'Escribe tus notas aquí...';
+    color: #555;
+    pointer-events: none;
+}
+
+/* =====================
+   TEMA 26: MEDIA QUERIES (ADAPTACIÓN A MÓVILES)
+   ===================== */
+
+/* Tablet y móviles grandes */
+@media (max-width: 768px) {
+
+    header h1        { font-size: 2em; letter-spacing: 4px; }
+    header img       { max-width: 90px; }
+    header .slogan   { font-size: 0.85em; }
+
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 14px;
+        gap: 8px;
+    }
+
+    nav a,
+    nav .btn-nav {
+        text-align: center;
+        width: 100%;
+    }
+
+    section.contenido {
+        padding: 0 12px;
+        margin: 20px auto;
+    }
+
+    .texto-columnas  { column-count: 1; }
+
+    .catalogo-grid   { flex-direction: column; }
+
+    .marcas-wrapper  { flex-direction: column; }
+
+    .video-float {
+        float: none;
+        margin: 0 auto 20px;
+        display: block;
+        transform: rotate(0deg);
+    }
+
+    .tabla-mensajes          { font-size: 0.78em; }
+    .tabla-mensajes th,
+    .tabla-mensajes td       { padding: 7px 8px; }
+
+    #velocimetro             { width: 220px; height: 170px; }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+
+    header h1    { font-size: 1.5em; }
+    article      { padding: 16px; }
+    .btn-enviar  { width: 100%; text-align: center; }
+
+    .temas-flex  { flex-direction: column; }
+    .tema-chip   { flex: 1 1 100%; }
+}
